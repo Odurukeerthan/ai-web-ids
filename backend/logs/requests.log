@@ -1,23 +1,20 @@
-{"timestamp":"2025-12-28T10:32:05.130Z","ip":"::1","method":"POST","url":"/api/auth/login","status":200,"payloadSize":42,"userAgent":"curl/8.17.0","responseTimeMs":4}
-{"timestamp":"2025-12-28T10:35:05.099Z","ip":"::1","method":"POST","url":"/api/auth/login","status":401,"payloadSize":40,"userAgent":"curl/8.17.0","responseTimeMs":1}
-{"timestamp":"2025-12-28T10:35:05.109Z","ip":"::1","method":"POST","url":"/api/auth/login","status":401,"payloadSize":40,"userAgent":"curl/8.17.0","responseTimeMs":1}
-{"timestamp":"2025-12-28T10:35:05.122Z","ip":"::1","method":"POST","url":"/api/auth/login","status":401,"payloadSize":40,"userAgent":"curl/8.17.0","responseTimeMs":0}
-{"timestamp":"2025-12-28T10:35:05.135Z","ip":"::1","method":"POST","url":"/api/auth/login","status":401,"payloadSize":40,"userAgent":"curl/8.17.0","responseTimeMs":1}
-{"timestamp":"2025-12-28T10:35:05.144Z","ip":"::1","method":"POST","url":"/api/auth/login","status":401,"payloadSize":40,"userAgent":"curl/8.17.0","responseTimeMs":0}
-{"timestamp":"2025-12-28T10:35:05.152Z","ip":"::1","method":"POST","url":"/api/auth/login","status":401,"payloadSize":40,"userAgent":"curl/8.17.0","responseTimeMs":1}
-{"timestamp":"2025-12-28T10:35:05.162Z","ip":"::1","method":"POST","url":"/api/auth/login","status":401,"payloadSize":40,"userAgent":"curl/8.17.0","responseTimeMs":1}
-{"timestamp":"2025-12-28T10:35:05.172Z","ip":"::1","method":"POST","url":"/api/auth/login","status":401,"payloadSize":40,"userAgent":"curl/8.17.0","responseTimeMs":2}
-{"timestamp":"2025-12-28T10:35:05.182Z","ip":"::1","method":"POST","url":"/api/auth/login","status":401,"payloadSize":40,"userAgent":"curl/8.17.0","responseTimeMs":1}
-{"timestamp":"2025-12-28T10:35:05.191Z","ip":"::1","method":"POST","url":"/api/auth/login","status":401,"payloadSize":41,"userAgent":"curl/8.17.0","responseTimeMs":1}
-{"timestamp":"2025-12-28T10:35:05.200Z","ip":"::1","method":"POST","url":"/api/auth/login","status":401,"payloadSize":41,"userAgent":"curl/8.17.0","responseTimeMs":0}
-{"timestamp":"2025-12-28T10:35:05.207Z","ip":"::1","method":"POST","url":"/api/auth/login","status":401,"payloadSize":41,"userAgent":"curl/8.17.0","responseTimeMs":0}
-{"timestamp":"2025-12-28T10:35:05.214Z","ip":"::1","method":"POST","url":"/api/auth/login","status":401,"payloadSize":41,"userAgent":"curl/8.17.0","responseTimeMs":0}
-{"timestamp":"2025-12-28T10:35:05.222Z","ip":"::1","method":"POST","url":"/api/auth/login","status":401,"payloadSize":41,"userAgent":"curl/8.17.0","responseTimeMs":1}
-{"timestamp":"2025-12-28T10:35:05.229Z","ip":"::1","method":"POST","url":"/api/auth/login","status":401,"payloadSize":41,"userAgent":"curl/8.17.0","responseTimeMs":1}
-{"timestamp":"2025-12-28T10:35:05.237Z","ip":"::1","method":"POST","url":"/api/auth/login","status":401,"payloadSize":41,"userAgent":"curl/8.17.0","responseTimeMs":1}
-{"timestamp":"2025-12-28T10:35:05.243Z","ip":"::1","method":"POST","url":"/api/auth/login","status":401,"payloadSize":41,"userAgent":"curl/8.17.0","responseTimeMs":0}
-{"timestamp":"2025-12-28T10:35:05.250Z","ip":"::1","method":"POST","url":"/api/auth/login","status":401,"payloadSize":41,"userAgent":"curl/8.17.0","responseTimeMs":0}
-{"timestamp":"2025-12-28T10:35:05.257Z","ip":"::1","method":"POST","url":"/api/auth/login","status":401,"payloadSize":41,"userAgent":"curl/8.17.0","responseTimeMs":0}
-{"timestamp":"2025-12-28T10:35:05.266Z","ip":"::1","method":"POST","url":"/api/auth/login","status":401,"payloadSize":41,"userAgent":"curl/8.17.0","responseTimeMs":0}
-{"timestamp":"2025-12-28T10:37:52.946Z","ip":"::1","method":"POST","url":"/api/auth/login","status":401,"payloadSize":50,"userAgent":"curl/8.17.0","responseTimeMs":1}
-{"timestamp":"2025-12-28T10:38:57.001Z","ip":"::1","method":"GET","url":"/api/auth/login","status":404,"payloadSize":2,"userAgent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36","responseTimeMs":3}
+
+{"timestamp":"2025-12-28T13:28:09.560Z","ip":"::1","method":"POST","url":"/api/auth/login","status":200,"payloadSize":42,"payloadSnippet":"{\"username\":\"admin\",\"password\":\"admin123\"}","userAgent":"curl/8.17.0","responseTimeMs":3}
+{"timestamp":"2025-12-28T13:28:31.715Z","ip":"::1","method":"POST","url":"/api/auth/login","status":200,"payloadSize":42,"payloadSnippet":"{\"username\":\"admin\",\"password\":\"admin123\"}","userAgent":"curl/8.17.0","responseTimeMs":1}
+{"timestamp":"2025-12-28T13:28:42.989Z","ip":"::1","method":"POST","url":"/api/auth/login","status":200,"payloadSize":42,"payloadSnippet":"{\"username\":\"admin\",\"password\":\"admin123\"}","userAgent":"curl/8.17.0","responseTimeMs":1}
+{"timestamp":"2025-12-28T13:29:03.788Z","ip":"::1","method":"POST","url":"/api/auth/login","status":401,"payloadSize":40,"payloadSnippet":"{\"username\":\"admin\",\"password\":\"wrong1\"}","userAgent":"curl/8.17.0","responseTimeMs":1}
+{"timestamp":"2025-12-28T13:29:03.798Z","ip":"::1","method":"POST","url":"/api/auth/login","status":401,"payloadSize":40,"payloadSnippet":"{\"username\":\"admin\",\"password\":\"wrong2\"}","userAgent":"curl/8.17.0","responseTimeMs":1}
+{"timestamp":"2025-12-28T13:29:03.806Z","ip":"::1","method":"POST","url":"/api/auth/login","status":401,"payloadSize":40,"payloadSnippet":"{\"username\":\"admin\",\"password\":\"wrong3\"}","userAgent":"curl/8.17.0","responseTimeMs":1}
+{"timestamp":"2025-12-28T13:29:03.815Z","ip":"::1","method":"POST","url":"/api/auth/login","status":401,"payloadSize":40,"payloadSnippet":"{\"username\":\"admin\",\"password\":\"wrong4\"}","userAgent":"curl/8.17.0","responseTimeMs":0}
+{"timestamp":"2025-12-28T13:29:03.827Z","ip":"::1","method":"POST","url":"/api/auth/login","status":401,"payloadSize":40,"payloadSnippet":"{\"username\":\"admin\",\"password\":\"wrong5\"}","userAgent":"curl/8.17.0","responseTimeMs":1}
+{"timestamp":"2025-12-28T13:29:03.842Z","ip":"::1","method":"POST","url":"/api/auth/login","status":401,"payloadSize":40,"payloadSnippet":"{\"username\":\"admin\",\"password\":\"wrong6\"}","userAgent":"curl/8.17.0","responseTimeMs":1}
+{"timestamp":"2025-12-28T13:29:03.855Z","ip":"::1","method":"POST","url":"/api/auth/login","status":401,"payloadSize":40,"payloadSnippet":"{\"username\":\"admin\",\"password\":\"wrong7\"}","userAgent":"curl/8.17.0","responseTimeMs":1}
+{"timestamp":"2025-12-28T13:29:03.867Z","ip":"::1","method":"POST","url":"/api/auth/login","status":401,"payloadSize":40,"payloadSnippet":"{\"username\":\"admin\",\"password\":\"wrong8\"}","userAgent":"curl/8.17.0","responseTimeMs":1}
+{"timestamp":"2025-12-28T13:29:03.876Z","ip":"::1","method":"POST","url":"/api/auth/login","status":401,"payloadSize":40,"payloadSnippet":"{\"username\":\"admin\",\"password\":\"wrong9\"}","userAgent":"curl/8.17.0","responseTimeMs":1}
+{"timestamp":"2025-12-28T13:29:03.887Z","ip":"::1","method":"POST","url":"/api/auth/login","status":401,"payloadSize":41,"payloadSnippet":"{\"username\":\"admin\",\"password\":\"wrong10\"}","userAgent":"curl/8.17.0","responseTimeMs":1}
+{"timestamp":"2025-12-28T13:29:45.517Z","ip":"::1","method":"POST","url":"/api/auth/login","status":401,"payloadSize":50,"payloadSnippet":"{\"username\":\"admin\\\" OR \\\"1\\\"=\\\"1\",\"password\":\"x\"}","userAgent":"curl/8.17.0","responseTimeMs":0}
+{"timestamp":"2025-12-28T13:30:10.631Z","ip":"::1","method":"POST","url":"/api/auth/login","status":401,"payloadSize":44,"payloadSnippet":"{\"username\":\"' OR 1=1 --\",\"password\":\"test\"}","userAgent":"curl/8.17.0","responseTimeMs":0}
+{"timestamp":"2025-12-28T13:30:48.975Z","ip":"::1","method":"POST","url":"/api/auth/login","status":401,"payloadSize":55,"payloadSnippet":"{\"username\":\"<script>alert(1)</script>\",\"password\":\"x\"}","userAgent":"curl/8.17.0","responseTimeMs":1}
+{"timestamp":"2025-12-28T13:31:05.377Z","ip":"::1","method":"POST","url":"/api/auth/login","status":401,"payloadSize":58,"payloadSnippet":"{\"username\":\"<img src=x onerror=alert(1)>\",\"password\":\"x\"}","userAgent":"curl/8.17.0","responseTimeMs":0}
+{"timestamp":"2025-12-28T13:31:17.891Z","ip":"::1","method":"POST","url":"/api/auth/login","status":401,"payloadSize":51,"payloadSnippet":"{\"username\":\"<svg onload=alert(1)>\",\"password\":\"x\"}","userAgent":"curl/8.17.0","responseTimeMs":1}
+{"timestamp":"2025-12-28T13:31:34.389Z","ip":"::ffff:127.0.0.1","method":"GET","url":"/api/auth/login","status":404,"payloadSize":2,"payloadSnippet":"\"\"","userAgent":"Mozilla/5.0 (X11; Linux x86_64; rv:140.0) Gecko/20100101 Firefox/140.0","responseTimeMs":2}

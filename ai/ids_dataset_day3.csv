@@ -1,0 +1,20 @@
+timestamp,ip,method,url,status,payloadSize,payloadSnippet,userAgent,responseTimeMs,time_delta,rapid_request,auth_fail,large_payload,is_get,xss_pattern,label
+2025-12-28 13:28:09.560000+00:00,::1,POST,/api/auth/login,200,42,"{""username"":""admin"",""password"":""admin123""}",curl/8.17.0,3,0.0,1,0,0,0,0,normal
+2025-12-28 13:28:31.715000+00:00,::1,POST,/api/auth/login,200,42,"{""username"":""admin"",""password"":""admin123""}",curl/8.17.0,1,22.155,0,0,0,0,0,normal
+2025-12-28 13:28:42.989000+00:00,::1,POST,/api/auth/login,200,42,"{""username"":""admin"",""password"":""admin123""}",curl/8.17.0,1,11.274,0,0,0,0,0,normal
+2025-12-28 13:29:03.788000+00:00,::1,POST,/api/auth/login,401,40,"{""username"":""admin"",""password"":""wrong1""}",curl/8.17.0,1,20.799,0,1,0,0,0,normal
+2025-12-28 13:29:03.798000+00:00,::1,POST,/api/auth/login,401,40,"{""username"":""admin"",""password"":""wrong2""}",curl/8.17.0,1,0.01,1,1,0,0,0,brute_force
+2025-12-28 13:29:03.806000+00:00,::1,POST,/api/auth/login,401,40,"{""username"":""admin"",""password"":""wrong3""}",curl/8.17.0,1,0.008,1,1,0,0,0,brute_force
+2025-12-28 13:29:03.815000+00:00,::1,POST,/api/auth/login,401,40,"{""username"":""admin"",""password"":""wrong4""}",curl/8.17.0,0,0.009,1,1,0,0,0,brute_force
+2025-12-28 13:29:03.827000+00:00,::1,POST,/api/auth/login,401,40,"{""username"":""admin"",""password"":""wrong5""}",curl/8.17.0,1,0.012,1,1,0,0,0,brute_force
+2025-12-28 13:29:03.842000+00:00,::1,POST,/api/auth/login,401,40,"{""username"":""admin"",""password"":""wrong6""}",curl/8.17.0,1,0.015,1,1,0,0,0,brute_force
+2025-12-28 13:29:03.855000+00:00,::1,POST,/api/auth/login,401,40,"{""username"":""admin"",""password"":""wrong7""}",curl/8.17.0,1,0.013,1,1,0,0,0,brute_force
+2025-12-28 13:29:03.867000+00:00,::1,POST,/api/auth/login,401,40,"{""username"":""admin"",""password"":""wrong8""}",curl/8.17.0,1,0.012,1,1,0,0,0,brute_force
+2025-12-28 13:29:03.876000+00:00,::1,POST,/api/auth/login,401,40,"{""username"":""admin"",""password"":""wrong9""}",curl/8.17.0,1,0.009,1,1,0,0,0,brute_force
+2025-12-28 13:29:03.887000+00:00,::1,POST,/api/auth/login,401,41,"{""username"":""admin"",""password"":""wrong10""}",curl/8.17.0,1,0.011,1,1,0,0,0,brute_force
+2025-12-28 13:29:45.517000+00:00,::1,POST,/api/auth/login,401,50,"{""username"":""admin\"" OR \""1\""=\""1"",""password"":""x""}",curl/8.17.0,0,41.63,0,1,1,0,0,sql_injection
+2025-12-28 13:30:10.631000+00:00,::1,POST,/api/auth/login,401,44,"{""username"":""' OR 1=1 --"",""password"":""test""}",curl/8.17.0,0,25.114,0,1,0,0,0,normal
+2025-12-28 13:30:48.975000+00:00,::1,POST,/api/auth/login,401,55,"{""username"":""<script>alert(1)</script>"",""password"":""x""}",curl/8.17.0,1,38.344,0,1,1,0,1,sql_injection
+2025-12-28 13:31:05.377000+00:00,::1,POST,/api/auth/login,401,58,"{""username"":""<img src=x onerror=alert(1)>"",""password"":""x""}",curl/8.17.0,0,16.402,0,1,1,0,1,sql_injection
+2025-12-28 13:31:17.891000+00:00,::1,POST,/api/auth/login,401,51,"{""username"":""<svg onload=alert(1)>"",""password"":""x""}",curl/8.17.0,1,12.514,0,1,1,0,1,sql_injection
+2025-12-28 13:31:34.389000+00:00,::ffff:127.0.0.1,GET,/api/auth/login,404,2,"""""",Mozilla/5.0 (X11; Linux x86_64; rv:140.0) Gecko/20100101 Firefox/140.0,2,0.0,1,0,0,1,0,recon
