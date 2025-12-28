@@ -1,0 +1,23 @@
+{"timestamp":"2025-12-28T10:32:05.130Z","ip":"::1","method":"POST","url":"/api/auth/login","status":200,"payloadSize":42,"userAgent":"curl/8.17.0","responseTimeMs":4}
+{"timestamp":"2025-12-28T10:35:05.099Z","ip":"::1","method":"POST","url":"/api/auth/login","status":401,"payloadSize":40,"userAgent":"curl/8.17.0","responseTimeMs":1}
+{"timestamp":"2025-12-28T10:35:05.109Z","ip":"::1","method":"POST","url":"/api/auth/login","status":401,"payloadSize":40,"userAgent":"curl/8.17.0","responseTimeMs":1}
+{"timestamp":"2025-12-28T10:35:05.122Z","ip":"::1","method":"POST","url":"/api/auth/login","status":401,"payloadSize":40,"userAgent":"curl/8.17.0","responseTimeMs":0}
+{"timestamp":"2025-12-28T10:35:05.135Z","ip":"::1","method":"POST","url":"/api/auth/login","status":401,"payloadSize":40,"userAgent":"curl/8.17.0","responseTimeMs":1}
+{"timestamp":"2025-12-28T10:35:05.144Z","ip":"::1","method":"POST","url":"/api/auth/login","status":401,"payloadSize":40,"userAgent":"curl/8.17.0","responseTimeMs":0}
+{"timestamp":"2025-12-28T10:35:05.152Z","ip":"::1","method":"POST","url":"/api/auth/login","status":401,"payloadSize":40,"userAgent":"curl/8.17.0","responseTimeMs":1}
+{"timestamp":"2025-12-28T10:35:05.162Z","ip":"::1","method":"POST","url":"/api/auth/login","status":401,"payloadSize":40,"userAgent":"curl/8.17.0","responseTimeMs":1}
+{"timestamp":"2025-12-28T10:35:05.172Z","ip":"::1","method":"POST","url":"/api/auth/login","status":401,"payloadSize":40,"userAgent":"curl/8.17.0","responseTimeMs":2}
+{"timestamp":"2025-12-28T10:35:05.182Z","ip":"::1","method":"POST","url":"/api/auth/login","status":401,"payloadSize":40,"userAgent":"curl/8.17.0","responseTimeMs":1}
+{"timestamp":"2025-12-28T10:35:05.191Z","ip":"::1","method":"POST","url":"/api/auth/login","status":401,"payloadSize":41,"userAgent":"curl/8.17.0","responseTimeMs":1}
+{"timestamp":"2025-12-28T10:35:05.200Z","ip":"::1","method":"POST","url":"/api/auth/login","status":401,"payloadSize":41,"userAgent":"curl/8.17.0","responseTimeMs":0}
+{"timestamp":"2025-12-28T10:35:05.207Z","ip":"::1","method":"POST","url":"/api/auth/login","status":401,"payloadSize":41,"userAgent":"curl/8.17.0","responseTimeMs":0}
+{"timestamp":"2025-12-28T10:35:05.214Z","ip":"::1","method":"POST","url":"/api/auth/login","status":401,"payloadSize":41,"userAgent":"curl/8.17.0","responseTimeMs":0}
+{"timestamp":"2025-12-28T10:35:05.222Z","ip":"::1","method":"POST","url":"/api/auth/login","status":401,"payloadSize":41,"userAgent":"curl/8.17.0","responseTimeMs":1}
+{"timestamp":"2025-12-28T10:35:05.229Z","ip":"::1","method":"POST","url":"/api/auth/login","status":401,"payloadSize":41,"userAgent":"curl/8.17.0","responseTimeMs":1}
+{"timestamp":"2025-12-28T10:35:05.237Z","ip":"::1","method":"POST","url":"/api/auth/login","status":401,"payloadSize":41,"userAgent":"curl/8.17.0","responseTimeMs":1}
+{"timestamp":"2025-12-28T10:35:05.243Z","ip":"::1","method":"POST","url":"/api/auth/login","status":401,"payloadSize":41,"userAgent":"curl/8.17.0","responseTimeMs":0}
+{"timestamp":"2025-12-28T10:35:05.250Z","ip":"::1","method":"POST","url":"/api/auth/login","status":401,"payloadSize":41,"userAgent":"curl/8.17.0","responseTimeMs":0}
+{"timestamp":"2025-12-28T10:35:05.257Z","ip":"::1","method":"POST","url":"/api/auth/login","status":401,"payloadSize":41,"userAgent":"curl/8.17.0","responseTimeMs":0}
+{"timestamp":"2025-12-28T10:35:05.266Z","ip":"::1","method":"POST","url":"/api/auth/login","status":401,"payloadSize":41,"userAgent":"curl/8.17.0","responseTimeMs":0}
+{"timestamp":"2025-12-28T10:37:52.946Z","ip":"::1","method":"POST","url":"/api/auth/login","status":401,"payloadSize":50,"userAgent":"curl/8.17.0","responseTimeMs":1}
+{"timestamp":"2025-12-28T10:38:57.001Z","ip":"::1","method":"GET","url":"/api/auth/login","status":404,"payloadSize":2,"userAgent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36","responseTimeMs":3}
