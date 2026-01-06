@@ -1,97 +1,93 @@
 import json
 import pandas as pd
+import numpy as np
 
 LOG_FILE = "../backend/logs/requests.log"
 
 records = []
-
-# -----------------------------
-# 1. Load JSON logs
-# -----------------------------
 with open(LOG_FILE, "r") as f:
     for line in f:
-        line = line.strip()
-        if not line:
-            continue
         try:
             records.append(json.loads(line))
         except json.JSONDecodeError:
             continue
 
 df = pd.DataFrame(records)
-
 print("Raw rows:", len(df))
-print(df.head())
 
 # -----------------------------
-# 2. Timestamp handling
+# Timestamp handling
 # -----------------------------
-df["timestamp"] = pd.to_datetime(df["timestamp"])
+df["timestamp"] = pd.to_datetime(df["timestamp"], utc=True, format="mixed")
 df = df.sort_values("timestamp")
 
 # -----------------------------
-# 3. Feature engineering
+# Base features
 # -----------------------------
-
-# Time delta per IP
 df["time_delta"] = (
     df.groupby("ip")["timestamp"]
     .diff()
     .dt.total_seconds()
-    .fillna(0)
+    .fillna(999)
 )
 
-# Rapid requests (brute-force signal)
-df["rapid_request"] = (df["time_delta"] < 0.1).astype(int)
-
-# Authentication failure
 df["auth_fail"] = (df["status"] == 401).astype(int)
-
-# Payload anomaly (SQLi proxy)
+df["rapid_request"] = (df["time_delta"] < 1.5).astype(int)
 df["large_payload"] = (df["payloadSize"] > 45).astype(int)
-
-# HTTP method flag
 df["is_get"] = (df["method"] == "GET").astype(int)
 
-# -----------------------------
-# 4. XSS detection (content-based)
-# -----------------------------
+# Content patterns
 df["xss_pattern"] = df["payloadSnippet"].str.contains(
-    r"<script|onerror=|onload=|<img|<svg",
+    r"<script|onerror=|onload=|<svg|<img|javascript:",
     case=False,
     na=False
 ).astype(int)
 
+df["sqli_pattern"] = df["payloadSnippet"].str.contains(
+    r"'|\"|--|/\*|\bor\b|\band\b|\bunion\b|\bselect\b",
+    case=False,
+    na=False,
+    regex=True
+).astype(int)
+
 # -----------------------------
-# 5. Weak-supervision labeling
+# Rolling behavior (KEY FIX)
+# -----------------------------
+df["fail_rolling"] = (
+    df.groupby("ip")["auth_fail"]
+    .rolling(window=30, min_periods=3)
+    .sum()
+    .reset_index(level=0, drop=True)
+)
+
+# -----------------------------
+# Final IDS labeling logic
 # -----------------------------
 def label_attack(row):
-    if row["rapid_request"] and row["auth_fail"]:
-        return "brute_force"
-
-    if row["large_payload"] and row["auth_fail"]:
-        return "sql_injection"
-
-    if row["xss_pattern"] == 1:
+    # Highest confidence attacks
+    if row["xss_pattern"]:
         return "xss"
 
+    if row["sqli_pattern"] and row["auth_fail"]:
+        return "sql_injection"
+
+    # Brute force = repeated auth failures in short history
+    if row["fail_rolling"] >= 4:
+        return "brute_force"
+
+    # Recon
     if row["is_get"] and row["status"] in [403, 404]:
         return "recon"
 
     return "normal"
 
-
 df["label"] = df.apply(label_attack, axis=1)
 
 # -----------------------------
-# 6. Verification
+# Verification
 # -----------------------------
-print("\nLabel distribution:")
+print("\nFinal label distribution:")
 print(df["label"].value_counts())
 
-# -----------------------------
-# 7. Save dataset
-# -----------------------------
 df.to_csv("ids_dataset_day3.csv", index=False)
-print("\nSaved: ids_dataset_day3.csv")
-
+print("\nSaved ids_dataset_day3.csv")
