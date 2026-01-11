@@ -51,3 +51,20 @@ y_pred_lr = lr.predict(X_test)
 print("\n=== Logistic Regression ===")
 print(classification_report(y_test, y_pred_lr))
 print(confusion_matrix(y_test, y_pred_lr))
+# -----------------------------
+# Strong Model: Random Forest
+# -----------------------------
+rf = RandomForestClassifier(
+    n_estimators=300,
+    max_depth=20,
+    class_weight="balanced_subsample",
+    random_state=42,
+    n_jobs=-1
+)
+
+rf.fit(X_train, y_train)
+y_pred_rf = rf.predict(X_test)
+
+print("\n=== Random Forest ===")
+print(classification_report(y_test, y_pred_rf))
+print(confusion_matrix(y_test, y_pred_rf))
