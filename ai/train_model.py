@@ -36,3 +36,18 @@ X_train, X_test, y_train, y_test = train_test_split(
 scaler = StandardScaler()
 X_train = scaler.fit_transform(X_train)
 X_test = scaler.transform(X_test)
+# -----------------------------
+# Baseline Model: Logistic Regression
+# -----------------------------
+lr = LogisticRegression(
+    max_iter=2000,
+    class_weight="balanced",
+    n_jobs=-1
+)
+
+lr.fit(X_train, y_train)
+y_pred_lr = lr.predict(X_test)
+
+print("\n=== Logistic Regression ===")
+print(classification_report(y_test, y_pred_lr))
+print(confusion_matrix(y_test, y_pred_lr))
