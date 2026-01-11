@@ -108,3 +108,16 @@ plt.ylabel("Window Count")
 plt.tight_layout()
 plt.savefig("plots/class_distribution.png")
 plt.show()
+
+# Brute force temporal pattern
+
+bf = df[df["label"] == "brute_force"]
+
+plt.figure(figsize=(10,4))
+plt.plot(bf["req_count"].values[:200])
+plt.title("Brute Force Request Burst Pattern")
+plt.ylabel("Requests per Window")
+plt.xlabel("Window Index")
+plt.tight_layout()
+plt.savefig("plots/bruteforce_timeline.png")
+plt.show()
