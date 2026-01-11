@@ -5,6 +5,8 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.linear_model import LogisticRegression
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import classification_report, confusion_matrix
+from sklearn.metrics import ConfusionMatrixDisplay
+
 
 # -----------------------------
 # Load dataset
@@ -83,4 +85,16 @@ plt.title("Top Feature Importances (Random Forest)")
 plt.ylabel("Importance")
 plt.tight_layout()
 plt.savefig("plots/feature_importance.png")
+plt.show()
+
+# Confusion matrix
+
+ConfusionMatrixDisplay.from_predictions(
+    y_test, y_pred_rf,
+    display_labels=label_map.keys(),
+    xticks_rotation=45
+)
+plt.title("Random Forest Confusion Matrix")
+plt.tight_layout()
+plt.savefig("plots/confusion_matrix.png")
 plt.show()
