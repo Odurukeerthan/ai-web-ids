@@ -1,4 +1,5 @@
 import pandas as pd
+import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 from sklearn.linear_model import LogisticRegression
@@ -68,3 +69,18 @@ y_pred_rf = rf.predict(X_test)
 print("\n=== Random Forest ===")
 print(classification_report(y_test, y_pred_rf))
 print(confusion_matrix(y_test, y_pred_rf))
+
+# Feature importance
+
+features = X.columns
+importances = rf.feature_importances_
+
+fi = pd.Series(importances, index=features).sort_values(ascending=False)
+
+plt.figure(figsize=(10,5))
+fi.head(10).plot(kind="bar")
+plt.title("Top Feature Importances (Random Forest)")
+plt.ylabel("Importance")
+plt.tight_layout()
+plt.savefig("plots/feature_importance.png")
+plt.show()
