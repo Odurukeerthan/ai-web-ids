@@ -98,3 +98,13 @@ plt.title("Random Forest Confusion Matrix")
 plt.tight_layout()
 plt.savefig("plots/confusion_matrix.png")
 plt.show()
+
+# Dataset class distribution
+
+df["label"].value_counts().plot(
+    kind="bar", figsize=(7,4), title="Final Dataset Class Distribution"
+)
+plt.ylabel("Window Count")
+plt.tight_layout()
+plt.savefig("plots/class_distribution.png")
+plt.show()
